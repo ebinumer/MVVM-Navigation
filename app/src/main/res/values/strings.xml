@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Test App</string>
+
+    <string name="someErrorInApi">Some error occurred.please try again</string>
+    <string name="no_network_connection">No network connection!</string>
+    <string name="service_error">There was problem with the service, please try again later</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+
+    <string name="english">عربي</string>
+
+</resources>

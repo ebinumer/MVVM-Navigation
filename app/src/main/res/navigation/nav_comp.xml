@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_wear.xml"
+    app:startDestination="@id/fragmentLogin"
+    >
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.whyte.test.ui.FragmentLogin"
+        android:label="FragmentLogin">
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/fragmentHome"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/fragmentLogin"
+            app:popUpToInclusive="true"
+
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.whyte.test.ui.FragmentHome"
+        android:label="FragmentHome">
+
+        <action
+            android:id="@+id/action_home_to_item"
+            app:destination="@id/fragmentItem"
+
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentItem"
+        android:name="com.whyte.test.ui.FragmentItem"
+        android:label="FragmentItem">
+        <argument
+            android:name="catId"
+            app:argType="integer" />
+
+    </fragment>
+</navigation>
