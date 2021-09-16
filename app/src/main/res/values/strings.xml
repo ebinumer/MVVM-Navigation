@@ -9,5 +9,6 @@
     <string name="login">LOGIN</string>
 
     <string name="english">عربي</string>
+    <string name="product_price">"QAR : "</string>
 
 </resources>

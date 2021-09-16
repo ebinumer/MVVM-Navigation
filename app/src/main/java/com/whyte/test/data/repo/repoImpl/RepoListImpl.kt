@@ -11,11 +11,11 @@ class RepoListImpl(
     private val mApi: TestApi
 ) : BaseRepository() {
 
-    suspend fun getList(page: Int, main_category: Int,sub_category: Int): Resource<ListModel?> {
+    suspend fun getList(page: Int, main_category: Int): Resource<ListModel?> {
         return object : DataFetchHelper.NetworkOnly<ListModel?>(
             "get List"
         ) {
-            override suspend fun getDataFromNetwork() = mApi.getList(page, main_category, sub_category)
+            override suspend fun getDataFromNetwork() = mApi.getList(page, main_category)
 
             override suspend fun convertApiResponseToData(response: Response<out Any?>) =
                 (response.body() as ListModel)

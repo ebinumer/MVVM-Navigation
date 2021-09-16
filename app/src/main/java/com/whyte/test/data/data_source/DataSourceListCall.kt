@@ -29,7 +29,7 @@ class DataSourceListCall (private val mRepo: RepoListImpl,
             if (mPage == 1) {
                 mNetworkState.postValue(StatefulResource.loading())
             }
-            val res = mRepo.getList(mPage,mcat, mSubcat)
+            val res = mRepo.getList(mPage,mcat)
             when {
                 res.hasData() -> {
                     res.data?.let {

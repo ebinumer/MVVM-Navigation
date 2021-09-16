@@ -28,6 +28,9 @@ class ViewmodelItemImpl(
             ).build()
 
         }
+    init {
+        mutableMList.value = "true"
+    }
 
     override fun onRefresh(mRefreshString: String) {
 

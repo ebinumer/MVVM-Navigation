@@ -17,7 +17,7 @@ class DataSourceList(
     val mSource: MutableLiveData<DataSourceListCall> = MutableLiveData()
     var mviewType: String = "true"
     override fun create(): DataSource<Int, ListModelData> {
-        Timber.e("Reached here")
+        Timber.e("Reached List DataSourc")
         val data = DataSourceListCall(
             mRepo, mScope, mcat, mSubcat
         )

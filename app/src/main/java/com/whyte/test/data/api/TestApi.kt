@@ -29,7 +29,6 @@ interface TestApi {
     suspend fun getList(
         @Field("page") page: Int,
         @Field("main_category") main_category: Int,
-        @Field("sub_category") sub_category: Int,
     ): Response<ListModel>
 
 }
