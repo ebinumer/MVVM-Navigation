@@ -30,7 +30,6 @@ class FragmentHome : BaseFragment<FragmentHomeBinding, ViewmodelHomeImp>() {
     override fun getLayoutResId(): Int = R.layout.fragment_home
     val onCategoryClickListener = object : OnCategoryonlyClickListener {
         override fun onCategoryClickListener(mData: CategoryDataModel, position: Int) {
-            mSessionManager.Cat= mData.id
             moveToNext(mData.id)
         }
     }

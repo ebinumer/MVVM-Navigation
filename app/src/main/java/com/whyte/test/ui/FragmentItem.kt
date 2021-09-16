@@ -13,13 +13,13 @@ import timber.log.Timber
 
 class FragmentItem : BaseFragment<FragmentItemlistBinding, ViewmodelItemImpl>() {
     private val mViemodel by viewModel<ViewmodelItemImpl>()
-//    {
-//        parametersOf(
-//            arguments?.let {
-//                FragmentItemArgs.fromBundle(it).catId
-//            }
-//        )
-//    }
+    {
+        parametersOf(
+            arguments?.let {
+                FragmentItemArgs.fromBundle(it).catId
+            }
+        )
+    }
     override val mViewModel: ViewmodelItemImpl
         get() = mViemodel
 

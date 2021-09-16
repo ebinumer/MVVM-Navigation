@@ -11,8 +11,10 @@ import com.whyte.test.data.model.ListModelData
 import com.whyte.test.data.repo.repoImpl.RepoListImpl
 import com.whyte.test.utils.SessionManager
 import com.whyte.test.utils.pagedListConfig
+import timber.log.Timber
 
 class ViewmodelItemImpl(
+    private val mProductId: Int,
     mSessionManager: SessionManager, mRepo:RepoListImpl):BaseViewModel() {
 
 
@@ -20,7 +22,7 @@ class ViewmodelItemImpl(
      val mList: LiveData<String>
         get() = mutableMList
 
-    private val systemDataSource = DataSourceList(mRepo, ioScope, mSessionManager.Cat!!,0)
+    private val systemDataSource = DataSourceList(mRepo, ioScope, mProductId,0)
      val apiResponseMlistData: LiveData<PagedList<ListModelData>>
         get() = Transformations.switchMap(mList){
             LivePagedListBuilder(
@@ -30,6 +32,7 @@ class ViewmodelItemImpl(
         }
     init {
         mutableMList.value = "true"
+        Timber.e("mProductId=$mProductId")
     }
 
     override fun onRefresh(mRefreshString: String) {
